@@ -8,8 +8,8 @@
     <description>Spell checker by Spelly</description>
     <language>en</language>
     <item>
-      <title>Version 0.0.13</title>
-      <enclosure url="https://github.com/spelly-io/plugin-test/releases/download/0.0.13/spelly.sketchplugin-v0.0.13-test.zip" sparkle:version="0.0.13" type="application/octet-stream" />
+      <title>Version 0.0.14</title>
+      <enclosure url="https://github.com/spelly-io/plugin-test/releases/download/0.0.14/spelly.sketchplugin-v0.0.14-test.zip" sparkle:version="0.0.14" type="application/octet-stream" />
     </item>
   </channel>
 </rss>
