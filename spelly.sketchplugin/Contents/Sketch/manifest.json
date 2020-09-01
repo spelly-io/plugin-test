@@ -1,0 +1,73 @@
+{
+    "title": "Spelly",
+    "name": "Spelly",
+    "description": "Spell checker by Spelly",
+    "identifier": "com.spellychecker.spelly",
+    "author": "Spelly Team",
+    "authorEmail": "dev@spelly.io",
+    "homepage": "https://test.spelly.io",
+    "appcast": "https://raw.githubusercontent.com/spelly-io/plugin-test/master/appcast-test.xml",
+    "download": "https://github.com/spelly-io/plugin-test/releases/download/0.0.1/spelly.sketchplugin-v0.0.1-test.zip",
+    "repository": "spelly-io/plugin-test",
+    "branch": "master",
+    "version": "0.0.1",
+    "frameworkVersion": "1.0.15",
+    "bundleVersion": 1,
+    "compatibleVersion": 3,
+    "lang": "en",
+    "icon": "build/img/logo.png",
+    "commands": [
+        {
+            "script": "SpellyTools.framework/bootstrap.js",
+            "identifier": "bootstrap",
+            "handlers": {
+                "actions": {
+                    "run": "onStartup",
+                    "onRun": "onStartup",
+                    "Startup": "onStartup"
+                }
+            }
+        },
+        {
+            "script": "main.js",
+            "identifier": "runtime",
+            "handlers": {
+                "actions": {
+                    "run": "onRun",
+                    "onRun": "onRun",
+                    "Startup": "onStartup",
+                    "OpenDocument": "onOpenDocument",
+                    "CloseDocument": "onCloseDocument",
+                    "onDocumentChanged": "onDocumentChanged",
+                    "TextChanged.finish": "onTextChanged",
+                    "SelectionChanged.finish": "onSelectionChanged",
+                    "HandleURL": "onHandleURL",
+                    "Undo.finish": "onUndo",
+                    "Redo.finish": "onRedo"
+                }
+            }
+        },
+        {
+            "name": "Restart",
+            "identifier": "restart",
+            "shortcut": "",
+            "script": "main.js",
+            "handler": "onRestart"
+        },
+        {
+            "name": "Run",
+            "identifier": "run",
+            "shortcut": "",
+            "script": "main.js",
+            "handler": "onRun"
+        }
+    ],
+    "menu": {
+        "title": "Spelly",
+        "items": [
+            "run",
+            "restart"
+        ]
+    },
+    "disableCocoaScriptPreprocessor": true
+}
